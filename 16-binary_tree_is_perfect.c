@@ -22,10 +22,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	}
 	if ((*tree).parent != NULL)
 	{
-		if (R > L)
+		if (L == R)
+			return (L + 1);
+		if (L < R)
 			return (R + 1);
 		if (L > R)
 			return (L + 1);
 	}
-	return (L + 1);
+	return (0);
 }
